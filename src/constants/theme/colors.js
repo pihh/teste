@@ -60,6 +60,10 @@ const colors = {
       borderTopColor: borderColor,
       borderTopWidth: 1,
     },
+    bottom: {
+      borderBottomColor: borderColor,
+      borderBottomWidth: 1,
+    },
   },
 
   gradients: {

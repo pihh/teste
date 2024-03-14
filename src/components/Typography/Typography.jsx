@@ -6,6 +6,7 @@ const Font = ({
   theme = "primary",
   path = [],
   color = "primary",
+  clamp=null
 }) => {
   let font = ProjectTheme.text[theme];
 
@@ -17,6 +18,8 @@ const Font = ({
 
   return (
     <Text
+    ellipsizeMode='tail'
+    numberOfLines={clamp}
       style={{
         ...font,
         color: color,
@@ -130,7 +133,14 @@ export const CardSmall = ({
 
 export const CardTitle = RowTitle;
 export const CardSubTitle = RowSubTitle;
-export const CardBody = RowBody;
+export const CardBody  = ({ children, theme = "primary", color = "primary" }) => {
+
+  return (
+    <Font path={["row", "body"]} theme={theme} color={color} clamp={10} >
+      {children}
+    </Font>
+  );
+};
 
 
 // Section

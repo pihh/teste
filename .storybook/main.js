@@ -7,8 +7,8 @@ module.exports = {
     // Other Storybook addons
     "@storybook/addon-ondevice-controls",
     "@storybook/addon-ondevice-actions",
-    '@storybook/addon-ondevice-notes',
-    '@storybook/addon-ondevice-backgrounds',
+    // '@storybook/addon-ondevice-notes',
+    // '@storybook/addon-ondevice-backgrounds',
 
     // "@storybook/addon-a11y", //👈 The a11y addon goes here
   ],

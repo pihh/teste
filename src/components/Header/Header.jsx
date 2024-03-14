@@ -67,25 +67,24 @@ export const RightHeaderRef = ({ onPress, name = "ellipsis-horizontal" }) => (
 );
 export const HeaderHome = ({ children, title, subtitle, rightRef }) => {
   return (
-    <View
-      style={{
-        ...ProjectTheme.padding.item,
-        ...ProjectTheme.position.flexRowCenter,
-        ...ProjectTheme.padding.item,
-        ...ProjectTheme.colors.border.top,
-        gap: ProjectTheme.gap.grid.md,
-        backgroundColor: ProjectTheme.colors.background.primary,
-      }}
-    >
-      <View style={{ flex: 1 }}>
-        <HeaderTitle>{title}</HeaderTitle>
-        <HeaderSubTitle color="secondary">{subtitle}</HeaderSubTitle>
+    <View>
+      <View style={{ height: "2em", width: "100%" }}></View>
+      <View
+        style={{
+          ...ProjectTheme.position.flexRowCenter,
+          ...ProjectTheme.padding.item,
+          ...ProjectTheme.colors.border.bottom,
+          marginTop: 0,
+          gap: ProjectTheme.gap.grid.md,
+          backgroundColor: ProjectTheme.colors.background.primary,
+        }}
+      >
+        <View style={{ flex: 1 }}>
+          <HeaderTitle>{title}</HeaderTitle>
+          <HeaderSubTitle color="secondary">{subtitle}</HeaderSubTitle>
+        </View>
+        <View>{rightRef}</View>
       </View>
-      <View>{rightRef}</View>
-      {/* </ContentRowNote>
-      <ContentRowRight>
-        {children}
-      </ContentRowRight> */}
     </View>
   );
 };

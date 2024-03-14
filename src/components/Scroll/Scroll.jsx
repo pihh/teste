@@ -1,14 +1,14 @@
 import { SafeAreaView, ScrollView, StyleSheet } from "react-native";
 import ProjectTheme from "../../constants/theme";
 
-export const Scroll = function ({ children, direction }) {
+export const Scroll = function ({ children, direction ,style={}}) {
   let horizontal = "horizontal" === direction;
   return (
     <SafeAreaView style={{backgroundColor:ProjectTheme.colors.background.primary}}>
       <ScrollView
         horizontal={horizontal}
         vertical={!horizontal}
-        style={styles.scrollView[horizontal ? "horizontal" : "vertical"]}
+        style={[styles.scrollView[horizontal ? "horizontal" : "vertical"],style]}
         overScrollMode={"always"}
       >
         {children}

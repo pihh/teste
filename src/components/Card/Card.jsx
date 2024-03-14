@@ -30,7 +30,7 @@ export const VerticalCard = function ({
   let Content = <Text></Text>;
   let Footer = <Text></Text>;
   let Main = children;
-  console.log({ children });
+  
   if (children && children.filter) {
     Main = children.filter((child) => {
       const childType = child?.type?.name.replace("Row", "Card");
