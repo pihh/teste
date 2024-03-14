@@ -89,6 +89,7 @@ export const RowSubTitle = ({
   theme = "primary",
   color = "primary",
 }) => {
+  
   return (
     <Font path={["row", "subTitle"]} theme={theme} color={color}>
       {children}
@@ -96,6 +97,7 @@ export const RowSubTitle = ({
   );
 };
 export const RowBody = ({ children, theme = "primary", color = "primary" }) => {
+
   return (
     <Font path={["row", "body"]} theme={theme} color={color}>
       {children}
@@ -113,13 +115,48 @@ export const RowSmall = ({
     </Font>
   );
 };
+export const CardSmall = ({
+  children,
+  theme = "primary",
+  color = "primary",
+}) => {
+  return (
+    <Font path={["card", "small"]} theme={theme} color={color}>
+      {children}
+    </Font>
+  );
+};
 // Card
 
 export const CardTitle = RowTitle;
 export const CardSubTitle = RowSubTitle;
 export const CardBody = RowBody;
-export const CardSmall = RowSmall;
 
+
+// Section
+export const SectionTitle = ({
+  children,
+  theme = "primary",
+  color = "primary",
+}) => {
+  return (
+    <Font path={["section", "title"]} theme={theme} color={color}>
+      {children}
+    </Font>
+  );
+};
+
+export const SectionSubTitle = ({
+  children,
+  theme = "primary",
+  color = "primary",
+}) => {
+  return (
+    <Font path={["section", "subTitle"]} theme={theme} color={color}>
+      {children}
+    </Font>
+  );
+};
 // Text
 export const P = ({ children, theme = "primary", color = "primary" }) => {
   return (

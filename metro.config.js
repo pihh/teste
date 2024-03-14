@@ -8,7 +8,9 @@ generate({
 });
 
 const defaultConfig = getDefaultConfig(__dirname);
-
+// transformer: {
+//   unstable_allowRequireContext: true,
+// },
 defaultConfig.transformer.unstable_allowRequireContext = true;
 
 module.exports = defaultConfig;

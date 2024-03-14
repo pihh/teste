@@ -13,7 +13,7 @@ import {
 } from "@expo-google-fonts/gothic-a1";
 import * as SplashScreen from "expo-splash-screen";
 import { useCallback } from "react";
-import { INITIAL_VIEWPORTS, MINIMAL_VIEWPORTS } from '@storybook/addon-viewport'
+// import { INITIAL_VIEWPORTS, MINIMAL_VIEWPORTS } from '@storybook/addon-viewport'
 SplashScreen.preventAutoHideAsync();
 
 /** @type{import("@storybook/react").Preview} */
@@ -26,10 +26,10 @@ const preview = {
       },
     },
     viewport: {
-      viewports: {
-        ...INITIAL_VIEWPORTS,
-        ...MINIMAL_VIEWPORTS,
-      },
+      // viewports: {
+      //   ...INITIAL_VIEWPORTS,
+      //   ...MINIMAL_VIEWPORTS,
+      // },
       defaultViewport: 'iphone14promax',
     },
   },

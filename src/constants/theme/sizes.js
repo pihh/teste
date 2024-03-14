@@ -3,7 +3,7 @@ export const height = {
         md: "3rem",
         sm: "2rem"
     },
-    pill: 28
+    pill: 38
 }
 
 export const width = {

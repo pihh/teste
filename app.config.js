@@ -5,5 +5,15 @@ export default ({ config }) => ({
   extra: {
     storybookEnabled: process.env.STORYBOOK_ENABLED,
   },
-  plugins: [ "expo-font"]
+   plugins: [ "expo-font"],
+  expo: {
+    plugins: [
+      [
+        "expo-barcode-scanner",
+        {
+          cameraPermission: "Allow $(PRODUCT_NAME) to access camera.",
+        },
+      ],
+    ],
+  },
 });

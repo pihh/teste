@@ -1,12 +1,19 @@
 import { Text, View } from "react-native";
-import { ContentRow, ContentRowBody, ContentRowHeadline, ContentRowNote } from "./Row";
+import {
+  ContentRow,
+  ContentRowBody,
+  ContentRowHeadline,
+  ContentRowNote,
+  ContentRowRight,
+} from "./Row";
+import { AntDesign } from "@expo/vector-icons";
 
 export default {
   title: "Components/Row",
   component: ContentRow,
   decorators: [
     (Story) => (
-      <View style={{  flex: 1 }}>
+      <View style={{ flex: 1 }}>
         <Story />
       </View>
     ),
@@ -24,21 +31,61 @@ export default {
 // Button.Left = ButtonLeft;
 export const Default = {
   args: {
-    thumbnail:"img",
-    children: [<ContentRowHeadline>Headline</ContentRowHeadline>,<ContentRowBody>Body</ContentRowBody>,<ContentRowNote>Note</ContentRowNote>],
-    icon:"arrowright"
+    thumbnail: {
+      uri: "https://reactnative.dev/img/tiny_logo.png",
+    },
+    children: [
+      <ContentRowHeadline key={1}>Headline</ContentRowHeadline>,
+      <ContentRowBody key={2}>Body</ContentRowBody>,
+      <ContentRowNote key={3}>Note</ContentRowNote>,
+      <ContentRowRight key={4}>
+        <AntDesign
+          name="arrowright"
+          size={16}
+        />
+      </ContentRowRight>,
+    ],
   },
 };
 
 export const Slots = {
   args: {
-    children: [<ContentRowHeadline>Headline</ContentRowHeadline>,<ContentRowBody>Body</ContentRowBody>,<ContentRowNote>Note</ContentRowNote>],
+    children: [
+      <ContentRowHeadline key={1}>Headline</ContentRowHeadline>,
+      <ContentRowBody key={2}>Body</ContentRowBody>,
+      <ContentRowNote key={3}>Note</ContentRowNote>,
+    ],
   },
 };
 export const SlotsAndThumbnail = {
   args: {
-    thumbnail:"img",
-    children: [<ContentRowHeadline>Headline</ContentRowHeadline>,<ContentRowBody>Body</ContentRowBody>,<ContentRowNote>Note</ContentRowNote>],
+    thumbnail: {
+      uri: "https://reactnative.dev/img/tiny_logo.png",
+    },
+    children: [
+      <ContentRowHeadline key={1}>Headline</ContentRowHeadline>,
+      <ContentRowBody key={2}>Body</ContentRowBody>,
+      <ContentRowNote key={3}>Note</ContentRowNote>,
+      <ContentRowRight key={4}>
+        <AntDesign name="plus" size={16} />
+      </ContentRowRight>,
+    ],
+  },
+};
+export const Blur = {
+  args: {
+    blur:true,
+    thumbnail: {
+      uri: "https://reactnative.dev/img/tiny_logo.png",
+    },
+    children: [
+      <ContentRowHeadline key={1}>Headline</ContentRowHeadline>,
+      <ContentRowBody key={2}>Body</ContentRowBody>,
+      <ContentRowNote key={3}>Note</ContentRowNote>,
+      <ContentRowRight key={4}>
+        <AntDesign name="plus" size={16} />
+      </ContentRowRight>,
+    ],
   },
 };
 /*

@@ -2,25 +2,28 @@ import { Pressable, StyleSheet, View } from "react-native";
 import ProjectTheme from "../../constants/theme";
 import { SmallBold } from "../Typography/Typography";
 import { ButtonWrapper } from "../Button/Button";
+export const PillRight = ({children})=>{
 
-export const Pill = ({
-  children,
-
-  onPress,
-  active = false,
-}) => {
+}
+export const Pill = ({ children, onPress, active = false, color = false }) => {
   let backgroundColor = {};
   let buttonWidth = { width: ProjectTheme.width.fit };
   let buttonHeight = { height: ProjectTheme.height.pill };
   // let buttonHeight = { height: ProjectTheme.height.button[height] };
-  let buttonTextSize = 12;
-  let textColor = active ? "contrast" : "primary";
+  let buttonTextSize = 14;
+  let textColorKey = active ? "contrast" : color? color:"primary";
 
-  backgroundColor = active
-    ? {}
-    : {
-        backgroundColor: ProjectTheme.colors.background.primary,
-      };
+  let textColor = {
+     color: ProjectTheme.text["primary"].textColors[textColorKey],
+   };
+
+  if (color === "gradient" || active) {
+  } else {
+    backgroundColor = {
+      backgroundColor: ProjectTheme.colors.background[textColorKey],
+    };
+  }
+ 
 
   return (
     <ButtonWrapper
@@ -29,6 +32,7 @@ export const Pill = ({
         backgroundColor,
         buttonWidth,
         buttonHeight,
+        textColor,
 
         { fontSize: buttonTextSize },
       ]}
@@ -36,7 +40,7 @@ export const Pill = ({
     >
       <Pressable onPress={onPress}>
         <View style={styles.primary}>
-          <SmallBold color={textColor}>{children}</SmallBold>
+          <SmallBold color={textColorKey}>{children}</SmallBold>
         </View>
       </Pressable>
     </ButtonWrapper>
@@ -52,6 +56,9 @@ const styles = StyleSheet.create({
     ...ProjectTheme.padding.item,
     ...ProjectTheme.margin.item,
     ...ProjectTheme.border.button,
+    marginLeft:0,
+    marginRight:0,
+    marginTop:8,
   },
   text: {},
   left: {},

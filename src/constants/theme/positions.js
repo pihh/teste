@@ -6,4 +6,9 @@ export const position = {
     justifyContent: "space-between",
     alignItems: "center",
   },
+  sticky:{
+    position:"sticky",
+    top:0,
+    zIndex:1
+  }
 };

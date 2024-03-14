@@ -12,15 +12,17 @@ export const text = {
     },
     header: {
       title: {
-        fontFamily: "GothicA1_700Bold",
+        fontFamily: "GothicA1_800ExtraBold",
         textTransform: "capitalize",
-        fontSize: 22,
-        lineHeight: 28,
+        fontSize: 26,
+        lineHeight: 32,
       },
       subTitle: {
-        fontFamily: "GothicA1_500Medium",
-        fontSize: 20,
-        lineHeight: 28,
+        fontFamily: "GothicA1_400Regular",
+        font: "GothicA1_400Regular",
+        fontSize: 16,
+        lineHeight: 24,
+   
       },
       body: {
         fontFamily: "GothicA1_300Light",
@@ -41,18 +43,12 @@ export const text = {
         fontSize: 15,
         lineHeight: 20,
       },
-      subTitle: {
-        fontFamily: "GothicA1_300Light",
-
-        fontSize: 14,
-        lineHeight: 20,
-      },
+ 
       small: {
-        fontFamily: "GothicA1_100Thin",
+        fontFamily: "GothicA1_300Light",
         textTransform: "uppercase",
-
         fontSize: 12,
-        lineHeight: 17,
+        lineHeight: 20,
       },
     },
     card: {
@@ -76,8 +72,8 @@ export const text = {
         lineHeight: 20,
       },
       small: {
-        fontFamily: "GothicA1_100Thin",
-        textTransform: "uppercase",
+        fontFamily: "GothicA1_300Light",
+        textTransform: "capitalize",
 
         fontSize: 12,
         lineHeight: 17,
@@ -114,7 +110,7 @@ export const text = {
       textTransform: "uppercase",
     },
     smallBold: {
-      fontFamily: "GothicA1_500Medium",
+      fontFamily: "GothicA1_700Bold",
       fontSize: 12,
       lineHeight: 16,
       textTransform: "uppercase",
